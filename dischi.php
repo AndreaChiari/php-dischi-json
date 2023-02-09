@@ -1,5 +1,4 @@
 <?php
-
 $discs = [
     [
         'title' => 'New Jersey',
@@ -72,6 +71,12 @@ $discs = [
         'genre' => 'Pop'
     ],
 ];
+
+//importo il file da leggere
+$url = __DIR__ . '/data.json';
+
+//leggo il contenuto del file
+$json_data = file_get_contents($url);
 
 header('Content-Type: application/json');
 echo json_encode($discs);
